@@ -1,0 +1,30 @@
+name: MULX CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Rust
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.4.0
+
+      - name: Install backend dependencies
+        run: cargo fetch
+
+      - name: Validate Rust workspace
+        run: cargo check --workspace --manifest-path Cargo.toml
+
+      - name: Validate Svelte app
+        run: bun run check:web

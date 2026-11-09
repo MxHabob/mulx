@@ -1,0 +1,3 @@
+:80 {
+  reverse_proxy mulx-api:3000
+}
