@@ -4,7 +4,8 @@ members = [
   "backend/crates/app",
   "backend/crates/infrastructure",
   "backend/api",
-  "backend/worker"
+  "backend/worker",
+  "apps/desktop/src-tauri"
 ]
 resolver = "2"
 

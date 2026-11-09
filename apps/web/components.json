@@ -1,0 +1,20 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema.json",
+	"tailwind": {
+		"css": "../../packages/ui/src/styles/app.css",
+		"baseColor": "neutral"
+	},
+	"aliases": {
+		"components": "@mulx/ui/components",
+		"utils": "@mulx/ui/utils",
+		"ui": "@mulx/ui/components/ui",
+		"hooks": "@mulx/ui/hooks",
+		"lib": "@mulx/ui"
+	},
+	"typescript": true,
+	"registry": "https://shadcn-svelte.com/registry",
+	"style": "lyra",
+	"iconLibrary": "lucide",
+	"menuColor": "default-translucent",
+	"menuAccent": "subtle"
+}
