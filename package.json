@@ -1,0 +1,18 @@
+{
+  "name": "mulx",
+  "private": true,
+  "packageManager": "bun@1.4.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:web": "bun --cwd apps/web run dev",
+    "build:web": "bun --cwd apps/web run build",
+    "check:web": "bun --cwd apps/web run check",
+    "dev:api": "cargo run --manifest-path backend/api/Cargo.toml",
+    "check:backend": "cargo check --workspace --manifest-path Cargo.toml",
+    "test:backend": "cargo test --workspace --manifest-path Cargo.toml",
+    "lint:all": "bun run check:web && cargo check --workspace --manifest-path Cargo.toml"
+  }
+}

@@ -1,0 +1,10 @@
+[package]
+name = "mulx-app"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+mulx-domain = { workspace = true }
+serde = { workspace = true }
+thiserror = { workspace = true }
+tracing = { workspace = true }

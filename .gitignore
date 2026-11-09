@@ -1,0 +1,25 @@
+# Build outputs
+/target/
+**/target/
+**/.svelte-kit/
+**/.vite/
+**/dist/
+**/build/
+**/node_modules/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Local tools
+bun.lockb
