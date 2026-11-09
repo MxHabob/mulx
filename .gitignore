@@ -6,6 +6,7 @@
 **/dist/
 **/build/
 **/node_modules/
+.turbo
 
 # Environment and secrets
 .env

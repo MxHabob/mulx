@@ -7,12 +7,19 @@
     "packages/*"
   ],
   "scripts": {
-    "dev:web": "cd apps/web && bun run dev",
-    "build:web": "cd apps/web && bun run build",
-    "check:web": "cd apps/web && bun run check",
+    "dev": "turbo run dev --continue",
+    "build": "turbo run build --continue",
+    "check": "turbo run check",
+    "lint": "turbo run lint",
+    "dev:web": "turbo run dev --filter=web",
+    "build:web": "turbo run build --filter=web",
+    "check:web": "turbo run check --filter=web",
     "dev:api": "cargo run --manifest-path backend/api/Cargo.toml",
     "check:backend": "cargo check --workspace --manifest-path Cargo.toml",
     "test:backend": "cargo test --workspace --manifest-path Cargo.toml",
-    "lint:all": "bun run check:web && cargo check --workspace --manifest-path Cargo.toml"
+    "lint:all": "turbo run check --filter=web && cargo check --workspace --manifest-path Cargo.toml"
+  },
+  "devDependencies": {
+    "turbo": "^2.11.10"
   }
 }
