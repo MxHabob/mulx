@@ -1,6 +1,13 @@
 [package]
-name = "infrastructure"
-version = "0.1.0"
-edition = "2024"
+name = "mulx-infrastructure"
+version.workspace = true
+edition.workspace = true
 
 [dependencies]
+mulx-domain = { workspace = true }
+mulx-app = { workspace = true }
+sqlx = { workspace = true }
+tokio = { workspace = true }
+tracing = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
